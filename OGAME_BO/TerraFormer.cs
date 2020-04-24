@@ -8,9 +8,5 @@ namespace OGAME_BO
 {
     public class TerraFormer : FunctionBuilding
     {
-        public override int? CellNb()
-        {
-            throw new NotImplementedException();
-        }
     }
 }

@@ -9,7 +9,7 @@ namespace OGAME_BO
 {
     public abstract class ResourceGenerator : Building
     {
-        [CheckResources]
+        /*[CheckResources]*/
         public virtual List<Resource> ResourceBySecond
         {
             get

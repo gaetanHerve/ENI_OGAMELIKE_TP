@@ -32,7 +32,7 @@ namespace OGAME_BO
 			get { return Level + 1; }
 		}
 
-		[CheckResources]
+		/*[CheckResources]*/
 		public virtual List<Resource> TotalCost 
 		{
 			get
@@ -42,7 +42,7 @@ namespace OGAME_BO
 			}
 		}
 
-		[CheckResources]
+		/*[CheckResources]*/
 		public virtual List<Resource> NextCost
 		{
 			get
