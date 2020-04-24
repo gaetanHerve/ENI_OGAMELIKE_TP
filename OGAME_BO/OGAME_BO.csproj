@@ -43,11 +43,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Building.cs" />
+    <Compile Include="CustomAnnotations\PastDate.cs" />
+    <Compile Include="CustomAnnotations\CheckResources.cs" />
     <Compile Include="FunctionBuilding.cs" />
     <Compile Include="Planet.cs" />
     <Compile Include="PowerPlant.cs" />
     <Compile Include="Resource.cs" />
     <Compile Include="ResourceGenerator.cs" />
+    <Compile Include="Utils\ResourcesTypes.cs" />
     <Compile Include="SolarSystem.cs" />
     <Compile Include="IDbEntity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

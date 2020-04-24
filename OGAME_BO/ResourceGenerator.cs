@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OGAME_BO.CustomAnnotations;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,10 +9,15 @@ namespace OGAME_BO
 {
     public abstract class ResourceGenerator : Building
     {
-        public List<Resource> ResourceBySecond()
+        [CheckResources]
+        public virtual List<Resource> ResourceBySecond
         {
-            List<Resource> result = new List<Resource>();
-            return result;
+            get
+            {
+                //A compléter
+                List<Resource> result = new List<Resource>();
+                return result;
+            }
         }
     }
 }

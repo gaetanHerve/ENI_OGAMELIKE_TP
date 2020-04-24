@@ -1,4 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using OGAME_BO.CustomAnnotations;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.Runtime.Remoting.Messaging;
 
 namespace OGAME_BO
@@ -8,6 +11,7 @@ namespace OGAME_BO
         public long? Id { get; set; }
 		private string name;
 
+		[StringLength(20, MinimumLength = 5)]
 		public string Name
 		{
 			get { return name; }
@@ -15,24 +19,37 @@ namespace OGAME_BO
 		}
 		private int? level;
 
+		[Range(0, int.MaxValue)]
 		public int? Level
 		{
 			get { return level; }
 			set { level = value; }
 		}
 
-		public abstract int? CellNb();
 
-		public List<Resource> TotalCost()
+		public virtual int? CellNb
 		{
-			List<Resource> result = new List<Resource>();
-			return result;
+			get { return Level + 1; }
 		}
 
-		public List<Resource> NextCost()
+		[CheckResources]
+		public virtual List<Resource> TotalCost 
 		{
-			List<Resource> result = new List<Resource>();
-			return result;
+			get
+			{
+				// A compléter
+				return new List<Resource>(); 
+			}
+		}
+
+		[CheckResources]
+		public virtual List<Resource> NextCost
+		{
+			get
+			{
+				// A compléter
+				return new List<Resource>();
+			}
 		}
 	}
 }

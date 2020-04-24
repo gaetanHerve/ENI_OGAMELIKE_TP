@@ -1,13 +1,18 @@
-﻿using System.Collections.Generic;
+﻿using OGAME_BO.CustomAnnotations;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Reflection;
+using System.Runtime.CompilerServices;
 
 namespace OGAME_BO
 {
     public class Planet : IDbEntity
     {
         public long? Id { get; set; }
+
 		private string name;
 
+		[StringLength(20, MinimumLength = 5)]
 		public string Name
 		{
 			get { return name; }
@@ -15,6 +20,7 @@ namespace OGAME_BO
 		}
 		private int? caseNb;
 
+		[Range(0, int.MaxValue)]
 		public int? CaseNb
 		{
 			get { return caseNb; }
@@ -22,6 +28,7 @@ namespace OGAME_BO
 		}
 		private List<Resource> resources = new List<Resource>();
 
+		[CheckResources]
 		public List<Resource> Resources
 		{
 			get { return resources; }
@@ -34,6 +41,5 @@ namespace OGAME_BO
 			get { return buildings; }
 			set { buildings = value; }
 		}
-
 	}
 }

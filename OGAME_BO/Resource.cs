@@ -1,4 +1,7 @@
-﻿using System;
+﻿using OGAME_BO.CustomAnnotations;
+using System;
+using System.ComponentModel.DataAnnotations;
+using System.Runtime.CompilerServices;
 
 namespace OGAME_BO
 {
@@ -6,6 +9,7 @@ namespace OGAME_BO
     {
         public long? Id { get; set; }
 
+		[StringLength(20, MinimumLength = 5)]
 		private string name;
 
 		public string Name
@@ -15,6 +19,7 @@ namespace OGAME_BO
 		}
 		private int? lastQuantity;
 
+		[Range(0, int.MaxValue)]
 		public int? LastQuantity
 		{
 			get { return lastQuantity; }
@@ -22,6 +27,7 @@ namespace OGAME_BO
 		}
 		private DateTime lastUpdate;
 
+		[PastDate]
 		public DateTime LastUpdate
 		{
 			get { return lastUpdate; }
