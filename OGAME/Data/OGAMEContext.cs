@@ -20,5 +20,9 @@ namespace OGAME.Data
         }
 
         public System.Data.Entity.DbSet<OGAME_BO.SolarSystem> SolarSystems { get; set; }
+
+        public System.Data.Entity.DbSet<OGAME_BO.Planet> Planets { get; set; }
+
+        public System.Data.Entity.DbSet<OGAME_BO.Resource> Resources { get; set; }
     }
 }
