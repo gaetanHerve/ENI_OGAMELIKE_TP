@@ -127,9 +127,9 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="OGameContext.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\SolarSystemsController.cs" />
+    <Compile Include="Data\OGAMEContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -171,21 +171,11 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Planet\Index.cshtml" />
-    <Content Include="Views\Planet\Create.cshtml" />
-    <Content Include="Views\Planet\Edit.cshtml" />
-    <Content Include="Views\Planet\Delete.cshtml" />
-    <Content Include="Views\Planet\Details.cshtml" />
-    <Content Include="Views\SolarSystem\Index.cshtml" />
-    <Content Include="Views\SolarSystem\Create.cshtml" />
-    <Content Include="Views\SolarSystem\Edit.cshtml" />
-    <Content Include="Views\SolarSystem\Delete.cshtml" />
-    <Content Include="Views\SolarSystem\Details.cshtml" />
-    <Content Include="Views\Resource\Index.cshtml" />
-    <Content Include="Views\Resource\Create.cshtml" />
-    <Content Include="Views\Resource\Edit.cshtml" />
-    <Content Include="Views\Resource\Details.cshtml" />
-    <Content Include="Views\Resource\Delete.cshtml" />
+    <Content Include="Views\SolarSystems\Create.cshtml" />
+    <Content Include="Views\SolarSystems\Delete.cshtml" />
+    <Content Include="Views\SolarSystems\Details.cshtml" />
+    <Content Include="Views\SolarSystems\Edit.cshtml" />
+    <Content Include="Views\SolarSystems\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

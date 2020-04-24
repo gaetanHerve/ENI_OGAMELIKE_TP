@@ -9,7 +9,7 @@ namespace OGAME_BO
 {
     public interface IDbEntity
     {
-        
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         long? Id { get; set; }
     }
 }
